@@ -1,0 +1,10 @@
+services:
+  go:
+    image: benbusby/whoogle-search
+    restart: unless-stopped
+    cap_drop:
+      - ALL
+    env_file: 
+      - whoogle.env
+    ports:
+      - 5000:5000
